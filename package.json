@@ -1,11 +1,14 @@
 {
-    "name": "extramuros",
-    "version": "0.0.3",
-    "dependencies": {
-	"express": "*",
-	"coffee-script": "*",
-	"zmq": "*",
-	"share": "0.6.3",
-	"nopt": "*"
-    }
+  "name": "extramuros",
+  "version": "0.0.3",
+  "dependencies": {
+    "express": "*",
+    "coffee-script": "*",
+    "zmq": "*",
+    "share": "0.6.3",
+    "nopt": "*"
+  },
+  "devDependencies": {
+    "bower": "^1.3.12"
+  }
 }
