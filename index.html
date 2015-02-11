@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>extramuros</title>
- <link rel="stylesheet" type="text/css" href="style.css">
+	<title>extramuros</title>
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body onload="setup()">
+<body>
+
+<main>
+	<div class="container">
+
+		<div class="form-group">
+			<label>Password:</label>
+			<input type="password" class="form-control">
+		</div>
+
+
+	</div>
+</main>
 
 <table>
 
-<tr>
-<td></td>
-<td>Password: <input type="password" name="password" length="32" id="password" class="text"/></td>
-</tr>
+	<tr>
+		<td></td>
+		<td>Password: <input type="password" name="password" length="32" id="password" class="text"/></td>
+	</tr>
 
-<tr>
-<td><input type="button" value="eval" class="evalButton" onclick="postSignal('/eval1');"/></td>
-<td><textarea id="edit1" rows="6" disabled>******</textarea></td>
-</tr>
+	<tr>
+		<td><input type="button" value="eval" class="evalButton" onclick="postSignal('/eval1');"/></td>
+		<td><textarea id="edit1" rows="6" disabled>******</textarea></td>
+	</tr>
 
-<tr>
-<td><input type="button" value="eval" class="evalButton" onclick="postSignal('/eval2');"/></td>
-<td><textarea id="edit2" rows="6" disabled>******</textarea></td>
-</tr>
+	<tr>
+		<td><input type="button" value="eval" class="evalButton" onclick="postSignal('/eval2');"/></td>
+		<td><textarea id="edit2" rows="6" disabled>******</textarea></td>
+	</tr>
 
-<tr>
-<td><input type="button" value="eval" class="evalButton" onclick="postSignal('/eval3');"/></td>
-<td><textarea id="edit3" rows="6" disabled>******</textarea></td>
-</tr>
+	<tr>
+		<td><input type="button" value="eval" class="evalButton" onclick="postSignal('/eval3');"/></td>
+		<td><textarea id="edit3" rows="6" disabled>******</textarea></td>
+	</tr>
 
-<tr>
-<td colspan="2"><textarea id="chat" rows="6" disabled style="width: 445px;">******</textarea></td>
-</tr>
+	<tr>
+		<td colspan="2"><textarea id="chat" rows="6" disabled style="width: 445px;">******</textarea></td>
+	</tr>
 
 </table>
 
