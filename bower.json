@@ -2,9 +2,7 @@
   "name": "extramuros",
   "version": "0.0.0",
   "homepage": "https://github.com/d0kt0r0/extramuros",
-  "authors": [
-    "Mike Hodnick <mike.hodnick@gmail.com>"
-  ],
+  "authors": [],
   "license": "MIT",
   "private": true,
   "ignore": [
