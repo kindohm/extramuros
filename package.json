@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "bower": "^1.3.12"
+  },
+  "scripts": {
+    "postinstall": "npm run bowerInstall",
+    "bowerInstall": "node node_modules/bower/bin/bower install --allow-root"
   }
 }
