@@ -12,7 +12,8 @@
 			var num = this.boxes.length + 1;
 			this.boxes.push({
 				id: 'edit' + num.toString(),
-				text: 'testing'
+				evalId: 'eval' + num.toString(),
+				name: 'Editor ' + num.toString()
 			});
 		};
 

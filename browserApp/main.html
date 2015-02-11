@@ -10,7 +10,7 @@
 <div ng-repeat="box in main.boxes" ng-controller="BoxController">
 
 	<div class="form-group">
-		<label>{{box.id}}</label>
+		<label>{{box.name}}</label>
 
 		<p>
 			<textarea id="{{box.id}}" rows="6" class="form-control">{{ box.text }}</textarea>
@@ -21,10 +21,4 @@
 		</p>
 	</div>
 
-</div>
-
-
-<div class="form-group">
-	<label>Chat</label>
-	<textarea id="chat" rows="6" class="form-control" disabled>******</textarea>
 </div>
