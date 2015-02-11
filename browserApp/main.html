@@ -7,17 +7,22 @@
 	<input type="password" name="password" id="password" class="form-control">
 </div>
 
-<div class="form-group">
-	<label>Edit1</label>
+<div ng-repeat="box in main.boxes" ng-controller="BoxController">
 
-	<p>
-		<textarea id="edit1" rows="6" class="form-control" disabled>******</textarea>
-	</p>
+	<div class="form-group">
+		<label>{{box.id}}</label>
 
-	<p>
-		<button class="btn btn-default" onclick="postSignal('/eval1');">Eval</button>
-	</p>
+		<p>
+			<textarea id="{{box.id}}" rows="6" class="form-control">{{ box.text }}</textarea>
+		</p>
+
+		<p>
+			<button class="btn btn-default" ng-click="postSignal()">Eval</button>
+		</p>
+	</div>
+
 </div>
+
 
 <div class="form-group">
 	<label>Chat</label>
