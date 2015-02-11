@@ -7,18 +7,10 @@
 	<input type="password" name="password" id="password" class="form-control">
 </div>
 
+<p>
+	<button class="btn btn-primary" ng-click="main.addBox()">Add Box</button>
+</p>
+
 <div ng-repeat="box in main.boxes" ng-controller="BoxController">
-
-	<div class="form-group">
-		<label>{{box.name}}</label>
-
-		<p>
-			<textarea id="{{box.id}}" rows="6" class="form-control">{{ box.text }}</textarea>
-		</p>
-
-		<p>
-			<button class="btn btn-default" ng-click="postSignal()">Eval</button>
-		</p>
-	</div>
-
+	<div ng-include src="'/browserApp/boxTemplate.html'"></div>
 </div>

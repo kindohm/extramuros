@@ -6,18 +6,16 @@
 
 		this.boxes = [];
 
-		this.message = 'hello';
-
 		this.addBox = function () {
-			var num = this.boxes.length + 1;
+			if (this.boxes.length >= 9) return;
+			var num = (this.boxes.length + 1).toString();
 			this.boxes.push({
-				id: 'edit' + num.toString(),
-				evalId: 'eval' + num.toString(),
-				name: 'Editor ' + num.toString()
+				id: 'edit' + num,
+				evalId: 'eval' + num,
+				name: 'Editor ' + num
 			});
 		};
 
-		this.addBox();
 		this.addBox();
 
 	});

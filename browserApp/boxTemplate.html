@@ -1,0 +1,11 @@
+<div class="form-group">
+	<label>{{box.name}}</label>
+
+	<p>
+		<textarea id="{{box.id}}" rows="6" class="form-control">{{ box.text }}</textarea>
+	</p>
+
+	<p>
+		<button class="btn btn-default" ng-click="postSignal()">Eval</button>
+	</p>
+</div>

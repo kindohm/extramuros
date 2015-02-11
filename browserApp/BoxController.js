@@ -31,10 +31,6 @@
 				$http.post(evalId + "-" + password);
 			}
 		}
-
-
 	});
-
-
 
 })();
