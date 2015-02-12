@@ -4,15 +4,30 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<p>
+
 		<div class="form-group form-inline">
-			<label>Password:</label>
-			<input type="password" name="password" id="password" class="form-control">
+			<p>
+				<label>Password:</label>
+				<input type="password" name="password" id="password" class="form-control">
+			</p>
 		</div>
-		</p>
 	</div>
 
-	<div class="col-md-6"><p><input type="checkbox" ng-model="main.showEvals"> Show eval buttons</p></div>
+	<div class="col-md-6">
+		<div class="row">
+			<div class="col-md-6">
+				<p>
+					<button class="btn btn-default btn-sm" ng-click="main.addBox()">Add Box</button>
+				</p>
+			</div>
+			<div class="col-md-6">
+				<p>
+					<input type="checkbox" ng-model="main.showEvals"> Show eval buttons
+				</p>
+			</div>
+
+		</div>
+	</div>
 </div>
 
 <style>
