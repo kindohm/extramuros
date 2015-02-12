@@ -8,9 +8,14 @@
 			rowHeight:175,
 			swapping: true,
 			minRows: 1,
-			columns: 6
+			columns: 6,
+			resizable:{
+				enabled: true,
+				handles: ['e','w']
+			}
 		};
 
+		this.showEvals = true;
 		this.boxes = [];
 
 		this.addBox = function () {
@@ -20,8 +25,11 @@
 				sizeX: 3,
 				sizeY: 1,
 				value: '',
+				visible: true,
 				id: 'edit' + num,
-				name: 'Editor ' + num
+				titleId: 'title' + num,
+				name: 'Editor ' + num,
+				highlightId: 'highlight' + num
 			});
 		};
 

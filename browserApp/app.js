@@ -1,6 +1,6 @@
 (function () {
 
-	var app = angular.module('extramurosApp', ['ngRoute', 'gridster'])
+	var app = angular.module('extramurosApp', ['ngRoute', 'gridster', 'xeditable', 'ui.bootstrap'])
 		.config(function ($routeProvider) {
 
 			$routeProvider.when('/', {
@@ -9,5 +9,4 @@
 			});
 
 		});
-
 })();
