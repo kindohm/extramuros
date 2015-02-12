@@ -19,16 +19,16 @@
 		openEditor($scope.box.id);
 
 		$scope.postSignal = function () {
-			postSignal($scope.box.evalId);
+			postSignal($scope.box.id);
 		};
 
-		function postSignal(evalId) {
+		function postSignal(id) {
 			var password = document.getElementById('password').value;
 			if(password == null || password == "") {
 				alert("You must enter a password to evaluate code.");
 			}
 			else {
-				$http.post(evalId + "-" + password);
+				$http.post(id + "-" + password);
 			}
 		}
 	});

@@ -53,15 +53,15 @@ function publishCode(id,res) {
   res.end();
 }
 
-server.post('/eval1-'+password, function(req, res, next) { publishCode('edit1',res); });
-server.post('/eval2-'+password, function(req, res, next) { publishCode('edit2',res); });
-server.post('/eval3-'+password, function(req, res, next) { publishCode('edit3',res); });
-server.post('/eval4-'+password, function(req, res, next) { publishCode('edit4',res); });
-server.post('/eval5-'+password, function(req, res, next) { publishCode('edit5',res); });
-server.post('/eval6-'+password, function(req, res, next) { publishCode('edit6',res); });
-server.post('/eval7-'+password, function(req, res, next) { publishCode('edit7',res); });
-server.post('/eval8-'+password, function(req, res, next) { publishCode('edit8',res); });
-server.post('/eval9-'+password, function(req, res, next) { publishCode('edit9',res); });
+server.post('/edit1-'+password, function(req, res, next) { publishCode('edit1',res); });
+server.post('/edit2-'+password, function(req, res, next) { publishCode('edit2',res); });
+server.post('/edit3-'+password, function(req, res, next) { publishCode('edit3',res); });
+server.post('/edit4-'+password, function(req, res, next) { publishCode('edit4',res); });
+server.post('/edit5-'+password, function(req, res, next) { publishCode('edit5',res); });
+server.post('/edit6-'+password, function(req, res, next) { publishCode('edit6',res); });
+server.post('/edit7-'+password, function(req, res, next) { publishCode('edit7',res); });
+server.post('/edit8-'+password, function(req, res, next) { publishCode('edit8',res); });
+server.post('/edit9-'+password, function(req, res, next) { publishCode('edit9',res); });
 
 server.get('/?', function(req, res, next) {
   res.writeHead(302, {location: '/index.html'});

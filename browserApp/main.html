@@ -11,6 +11,23 @@
 	<button class="btn btn-primary" ng-click="main.addBox()">Add Box</button>
 </p>
 
-<div ng-repeat="box in main.boxes" ng-controller="BoxController">
-	<div ng-include src="'/browserApp/boxTemplate.html'"></div>
+<div gridster="gridsterOpts">
+
+	<div gridster-item="box" ng-repeat="box in main.boxes" ng-controller="BoxController" class="panel panel-default">
+		<div class="panel-heading">{{box.id}}</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-10"><textarea rows="4" class="form-control" id="{{box.id}}"
+												 style="font-family: monospace"
+												 ng-model="box.value"></textarea>
+				</div>
+
+				<div class="col-md-2">
+					<button class="btn btn-default" ng-click="postSignal()">Eval</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
 </div>

@@ -1,6 +1,6 @@
 (function () {
 
-	var app = angular.module('extramurosApp', ['ngRoute'])
+	var app = angular.module('extramurosApp', ['ngRoute', 'gridster'])
 		.config(function ($routeProvider) {
 
 			$routeProvider.when('/', {
