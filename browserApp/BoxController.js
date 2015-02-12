@@ -16,6 +16,7 @@
 
 	app.controller('BoxController', function ($scope, $http) {
 		openEditor($scope.box.id);
+		openEditor($scope.box.titleId);
 
 		$scope.postSignal = function () {
 			doEval();

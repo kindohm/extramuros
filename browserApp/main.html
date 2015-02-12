@@ -1,23 +1,32 @@
+<h1>extramuros (fork)</h1>
+<p>A networked, live-coding web app.
+	Forked from <a href="https://github.com/d0kt0r0/extramuros">github.com/d0kt0r0/extramuros</a></p>
+
 <div class="row">
 	<div class="col-md-6">
-		<h1>extramuros (fork)</h1>
-	</div>
-	<div class="col-md-6 text-right">
-		<div class="form-inline">
-			<div class="form-group" style="margin-top: 20px;">
-				<label>Password:</label>
-				<input type="password" name="password" id="password" class="form-control">
-			</div>
+		<p>
+		<div class="form-group form-inline">
+			<label>Password:</label>
+			<input type="password" name="password" id="password" class="form-control">
 		</div>
+		</p>
 	</div>
+
+	<div class="col-md-6"><p><input type="checkbox" ng-model="main.showEvals"> Show eval buttons</p></div>
 </div>
 
-<div>
-	<p><a style="cursor: pointer;" ng-click="showOptions = !showOptions">Show/Hide Options</a></p>
-	<div collapse="!showOptions" class="well">
-		<p><input type="checkbox" ng-model="main.showEvals"> Show Evals</p>
-	</div>
-</div>
+<style>
+	input[type="text"], input[type="password"] {
+		height: 30px;
+		padding: 7px;
+		background-color: #222222;
+		color: #fff;
+	}
+
+	input[type="password"] {
+		background-color: #464545;
+	}
+</style>
 
 <div gridster="gridsterOpts">
 
@@ -25,20 +34,21 @@
 		 class="panel panel-default">
 		<div class="panel-heading">
 			<div class="row">
-				<div class="col-md-6">
-					<span>{{box.name}}</span>
+				<div class="col-md-5">
+					<input ng-model="box.name" id="{{box.titleId}}" class="form-control name-input" type="text"
+						   placeholder="{{box.name}}">
 				</div>
-				<div class="col-md-6 text-right">
+				<div class="col-md-7 text-right">
 					<span class="text-danger" ng-show="errorText">{{errorText}}</span>
 				</div>
 			</div>
 		</div>
 		<div class="panel-body">
 			<div class="row">
-				<p ng-attr-class="{{ main.showEvals && 'col-md-10' || 'col-md-12'}}">
+				<p ng-attr-class="{{ (main.showEvals && !box.isChat) && 'col-md-10' || 'col-md-12'}}">
 				<textarea
 						rows="4"
-						class="form-control highlightable"
+						class="form-control"
 						id="{{box.id}}"
 						style="font-family: monospace;height: 100%"
 						ng-keydown="handleKeydown($event)"
@@ -46,8 +56,11 @@
 						ng-model="box.value"></textarea>
 				</p>
 
-				<p ng-attr-class="{{ main.showEvals && 'col-md-2' || ''}}">
-					<button class="btn btn-default" style="width:100%" ng-click="postSignal()" ng-show="main.showEvals">Eval</button>
+				<p ng-attr-class="{{ (main.showEvals && !box.isChat) && 'col-md-2' || ''}}">
+					<button class="btn btn-xs btn-default" style="width:100%" ng-click="postSignal()"
+							ng-show="main.showEvals && !box.isChat">
+						Eval
+					</button>
 				</p>
 			</div>
 		</div>
